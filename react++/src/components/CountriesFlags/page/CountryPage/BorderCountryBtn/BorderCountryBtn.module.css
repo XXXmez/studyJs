@@ -1,0 +1,11 @@
+.bordersBtn {
+  background-color: var(--headerColor);
+  padding: 5px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.bordersBtn:hover {
+  background-color: var(--bodyColor);
+}

@@ -1,0 +1,26 @@
+.header {
+	display: flex;
+	background-color: #474955;
+	padding: 10px 0;
+}
+.header button {
+	height: 40px;
+	background: none;
+	border: none;
+	color: white;
+	cursor: pointer;
+}
+.id {
+	width: 10%;
+}
+.title,
+.description {
+	width: 45%;
+}
+
+.id,
+.title,
+.description {
+	display: flex;
+	justify-content: center;
+}

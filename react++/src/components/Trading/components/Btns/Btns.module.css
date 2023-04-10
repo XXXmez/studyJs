@@ -1,0 +1,23 @@
+.items {
+  display: flex;
+  gap: 30px;
+}
+
+.item {
+}
+.btn {
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+  align-items: center;
+  color: inherit;
+  background-color: transparent;
+  border: 0;
+}
+
+.item_buy {
+  color: green;
+}
+.item_sell {
+  color: red;
+}

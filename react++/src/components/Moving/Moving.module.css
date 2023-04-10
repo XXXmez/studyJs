@@ -1,0 +1,25 @@
+.box {
+  background-color: rgb(177, 177, 177);
+  padding: 50px;
+  border-radius: 50px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.list {
+  list-style: none;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+.controls {
+  display: flex;
+  gap: 5px;
+}
+.control {
+  display: flex;
+}

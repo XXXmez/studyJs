@@ -1,0 +1,49 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.quest-number {
+  width: 40px;
+  height: 40px;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: black;
+  font-weight: 500;
+  border-radius: 50%;
+}
+
+.quest {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.quest-answer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.button-quest {
+  background: #7ea77e;
+  padding: 5px;
+  border-radius: 5px;
+}
+.button-quest:hover {
+  background-color: bisque;
+}
+.button-restart {
+  border: 0;
+  background: transparent;
+  font-size: 30px;
+  cursor: pointer;
+}

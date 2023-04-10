@@ -1,0 +1,46 @@
+.todo {
+    max-width: 500px;
+    width: 100%;
+}
+
+.todo_input > input {
+    width: 100%;
+    padding: 10px;
+}
+
+.todo_btn {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+.todo_btn > button {
+    padding: 10px 20px;
+}
+
+.todo_list {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    list-style: none;
+}
+
+.todo_item {
+    border: 1px solid gray;
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+.todo_item > div {
+    display: flex;
+    gap: 10px;
+}
+
+.todo_item > div > button {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

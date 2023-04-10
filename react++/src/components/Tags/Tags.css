@@ -1,0 +1,29 @@
+.tags {
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 5px;
+  width: 500px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  cursor: text;
+}
+.tag {
+  background-color: #71a5e0;
+  padding: 5px;
+  border-radius: 5px;
+}
+.tag button {
+  margin-left: 5px;
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+}
+
+.tags-input {
+  min-width: 150px;
+  border: none;
+  outline: none;
+  height: 30px;
+  font-size: 16px;
+}

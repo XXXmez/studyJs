@@ -1,0 +1,14 @@
+.wrapper {
+  max-width: 350px;
+  padding: 15px;
+  background-color: #3081a1d9;
+  border-radius: 15px;
+}
+
+.form {
+}
+
+.formBlock {
+  display: flex;
+  flex-direction: column;
+}

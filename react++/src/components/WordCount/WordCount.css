@@ -1,0 +1,24 @@
+.wordCount {
+  display: flex;
+  gap: 20px;
+}
+.wordCount-excludeds {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+.wordCount-excluded {
+  display: flex;
+    justify-content: space-between;
+    border: 1px solid gray;
+    padding: 5px;
+    border-radius: 5px;
+    background: indianred;
+}
+
+.wordCount-excluded button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}

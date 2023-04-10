@@ -1,0 +1,70 @@
+select,
+input {
+  outline: none;
+}
+
+/* .App {
+  background: #c7eef5;
+  color: #fffffb;
+} */
+.manager {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: stretch;
+  width: 400px;
+}
+.container {
+  background: #df622c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  border-radius: 25px;
+}
+.expenses-list {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 5px;
+}
+.expenses-item {
+  display: flex;
+  padding-bottom: 3px;
+  border-bottom: 1px solid black;
+}
+.expenses-text {
+  margin-right: 5px;
+}
+.expenses-button {
+  margin-left: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.category-icons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.category-icon {
+  padding: 5px;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.category-icon:hover {
+  background-color: #c7eef5;
+}
+
+.transaction-numbers {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+}
+.transaction-number {
+  font-size: 16px;
+  width: 22px;
+  height: 22px;
+}

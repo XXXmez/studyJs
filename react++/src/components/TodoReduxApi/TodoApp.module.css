@@ -1,0 +1,7 @@
+.app {
+  width: 100%;
+  max-width: 700px;
+  padding: 30px;
+  border: 2px solid black;
+  border-radius: 10px;
+}

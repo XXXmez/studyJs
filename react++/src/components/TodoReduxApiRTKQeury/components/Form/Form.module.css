@@ -1,0 +1,32 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.input {
+  width: 100%;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-size: 20px;
+}
+.btn {
+  width: 150px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.btn:disabled {
+  opacity: 0.8;
+  cursor: auto;
+}
+
+.green {
+  color: green;
+}
+.red {
+  color: red;
+}

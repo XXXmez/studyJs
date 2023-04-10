@@ -1,0 +1,61 @@
+.backBtn {
+  border: none;
+  background-color: var(--headerColor);
+  padding: 5px 15px;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 15px;
+  box-shadow: var(--shadowElement);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.content {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+}
+
+.img {
+  width: 100%;
+}
+.flag {
+  width: 100%;
+}
+.gerb {
+  width: 150px;
+}
+
+.description {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.country {
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.info > div {
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.bordersBtns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+@media (max-width: 900px) {
+  .content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

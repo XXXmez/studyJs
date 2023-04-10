@@ -1,0 +1,25 @@
+.header {
+  padding: 30px;
+
+  background-color: var(--headerColor);
+}
+
+.wrapper {
+  max-width: var(--maxWidth);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  text-decoration: none;
+  color: inherit;
+}
+
+.themes > button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: inherit;
+}

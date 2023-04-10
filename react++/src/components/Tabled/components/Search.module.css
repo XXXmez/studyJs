@@ -1,0 +1,40 @@
+.search {
+  display: flex;
+  align-items: center;
+  position: relative;
+  max-width: 630px;
+}
+
+.search > input {
+  width: 100%;
+  padding: 15px 60px 15px 25px;
+  background: #5a5c66;
+  border: none;
+  font-size: 14px;
+  color: #fff;
+}
+.search > input::placeholder {
+  color: #b2b7bf;
+  font-weight: 400;
+}
+
+.btn_close {
+  border: 0;
+  display: flex;
+  background: transparent;
+  cursor: pointer;
+  position: absolute;
+  right: 40px;
+}
+
+.btn_search {
+  border: 0;
+  display: flex;
+  background: transparent;
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+}
+.btn_search:hover > svg {
+  fill: #b2b7bf;
+}

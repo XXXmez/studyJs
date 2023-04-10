@@ -1,0 +1,55 @@
+.selector {
+  max-width: 200px;
+  width: 100%;
+  position: relative;
+  user-select: none;
+}
+
+.controller {
+  background-color: var(--headerColor);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.imgs {
+  display: flex;
+}
+.wrapperImg {
+  padding: 5px;
+  display: flex;
+}
+.wrapperImg_close {
+  margin-right: 5px;
+}
+.wrapperImg_arrow {
+  margin-left: 5px;
+}
+.imgsBorder {
+  width: 1px;
+  background-color: var(--textColor);
+  display: block;
+}
+
+.wrapper {
+  width: 100%;
+  margin-top: 4px;
+  top: 100%;
+  position: absolute;
+  left: 0;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  background-color: var(--headerColor);
+  padding: 5px 15px;
+  box-shadow: var(--shadowElement);
+}
+.option {
+  cursor: pointer;
+}

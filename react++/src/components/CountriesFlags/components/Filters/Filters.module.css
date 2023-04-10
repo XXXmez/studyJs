@@ -1,0 +1,45 @@
+.box {
+  margin: 30px 0;
+}
+.controls {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input::placeholder {
+  color: inherit;
+  opacity: 0.5;
+}
+
+.selectBox {
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 6px;
+  right: 20px;
+  font-size: 17px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #8080802e;
+  border: navajowhite;
+  color: inherit;
+  cursor: pointer;
+}
+
+.select,
+.input {
+  color: inherit;
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  background-color: var(--headerColor);
+  box-shadow: var(--shadowElement);
+  border-radius: 10px;
+  cursor: pointer;
+}

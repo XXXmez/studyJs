@@ -1,0 +1,32 @@
+.boxText {
+  margin-bottom: 15px;
+}
+
+.btn {
+  padding: 0 10px;
+  height: 35px;
+  border-radius: 5px;
+  border: 0;
+  outline: none;
+  background-color: #81b7e2;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.text {
+  font-size: 18px;
+  margin-top: 5px;
+  text-align: justify;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0px 5px;
+}
+
+.green {
+  color: green;
+}
+.red {
+  color: red;
+}

@@ -1,0 +1,14 @@
+.questions {
+  width: 250px;
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+}
+
+.question input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+}

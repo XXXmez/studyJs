@@ -1,0 +1,44 @@
+.box {
+  width: 100%;
+}
+
+.list {
+  width: 100%;
+}
+
+.item {
+  display: flex;
+
+  margin-bottom: 5px;
+}
+.item:first-child {
+  border-bottom: 2px solid gray;
+  font-weight: 700;
+}
+
+.item > p {
+  text-align: center;
+}
+
+.item > p:nth-child(1) {
+  width: 15%;
+}
+.item > p:nth-child(2) {
+  width: 15%;
+}
+.item > p:nth-child(3) {
+  width: 20%;
+}
+.item > p:nth-child(4) {
+  width: 20%;
+}
+.item > p:nth-child(5) {
+  width: 30%;
+}
+
+.green {
+  color: green;
+}
+.red {
+  color: red;
+}

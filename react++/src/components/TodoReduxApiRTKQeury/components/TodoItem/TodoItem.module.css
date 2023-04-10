@@ -1,0 +1,19 @@
+.item {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  border-bottom: 1px solid gray;
+  padding: 10px 0;
+}
+
+.item > button {
+  margin-left: auto;
+}
+
+.red {
+  color: red;
+}
+
+.blue {
+  color: blue;
+}

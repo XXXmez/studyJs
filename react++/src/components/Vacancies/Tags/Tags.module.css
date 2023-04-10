@@ -1,0 +1,44 @@
+.box {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: beige;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    padding: 0px 0px 0px 5px;
+    border-radius: 3px;
+    background-color: #fae2c6;
+    transition: .3s;
+    overflow: hidden;
+}
+
+.tag > button {
+    height: 27px;
+    width: 27px;
+    background-color: transparent;
+    border: 0;
+    margin-left: 5px;
+    transition: .3s;
+    cursor: pointer;
+}
+.tag > button:hover {
+    background-color: black;
+    color: white;
+}
+
+.clear {
+    background-color: transparent;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+}

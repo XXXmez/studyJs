@@ -1,0 +1,48 @@
+.selector {
+  background-color: rgb(175, 175, 175);
+  max-width: 200px;
+  width: 100%;
+  border-radius: 10px;
+  position: relative;
+}
+
+.controller {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+.imgs {
+  display: flex;
+}
+.wrapperImg {
+  padding: 5px;
+  display: flex;
+}
+.imgsBorder {
+  width: 1px;
+  background-color: #989898;
+  display: block;
+}
+
+.wrapper {
+  width: 100%;
+  margin-top: 4px;
+  top: 100%;
+  position: absolute;
+  left: 0;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  background-color: rgb(175, 175, 175);
+  padding: 5px 15px;
+  box-shadow: 0px 0px 8px 1px #65656587;
+}
+.option {
+  cursor: pointer;
+}

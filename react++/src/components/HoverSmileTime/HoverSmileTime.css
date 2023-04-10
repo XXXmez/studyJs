@@ -1,0 +1,19 @@
+.hv1_2 {
+  width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hv1_1 {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.hv1_3 {
+  flex-direction: column;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
