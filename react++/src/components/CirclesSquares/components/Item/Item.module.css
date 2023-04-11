@@ -1,0 +1,16 @@
+.card {
+  height: 0;
+  padding-bottom: 100%;
+}
+/* .card:before {
+  content: "";
+  display: block;
+  margin-top: 100%;
+} */
+
+/* .card:after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 0;
+} */

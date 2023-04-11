@@ -1,0 +1,22 @@
+.title {
+  width: 100%;
+  text-align: center;
+}
+
+.box {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.figures {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  user-select: none;
+}
+.figure {
+  width: 15px;
+  height: 15px;
+}

@@ -2,26 +2,51 @@ import React from "react";
 
 import s from "./Header.module.css";
 
-const Header = () => {
+const Header = ({
+  activeCircles,
+  activeSquares,
+  setMenuOpen,
+  setActiveCircles,
+  setActiveSquares,
+}) => {
+  const handlerClickCircles = () => {
+    setActiveCircles((prev) => !prev);
+  };
+  const handlerClickSquares = () => {
+    setActiveSquares((prev) => !prev);
+  };
+
+  const HandlerOpenMenu = () => {
+    setMenuOpen(true);
+  };
+
   return (
-    <div className="cs3_header">
-      <h1>Круги и квадраты 3.0</h1>
-      <div className="cs4">
-        <button>M</button>
-        <div>
+    <header className={s.header}>
+      <h1 className={s.title}>Круги и квадраты 3.0</h1>
+      <div className={s.box}>
+        <button onClick={HandlerOpenMenu}>☰</button>
+        <div className={s.figures}>
           <label>
-            <input type={"checkbox"} />
+            <input
+              type={"checkbox"}
+              className={s.figure}
+              checked={activeCircles}
+              onChange={handlerClickCircles}
+            />
             Круги
           </label>
-        </div>
-        <div>
           <label>
-            <input type={"checkbox"} />
+            <input
+              type={"checkbox"}
+              className={s.figure}
+              checked={activeSquares}
+              onChange={handlerClickSquares}
+            />
             Квадраты
           </label>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 

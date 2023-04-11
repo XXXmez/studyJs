@@ -1,87 +1,114 @@
-import React, { useRef, useState } from "react";
+import React from "react";
+import CustomInput from "../UI/CustomInput/CustomInput";
+import RadioInput from "../UI/RadioInput/RadioInput";
 
 import s from "./Menu.module.css";
 
-const Menu = ({ setRed, setGreen, setBlue, setYellow }) => {
-  const [colorRed, serColorRed] = useState(false);
-  const [colorGreen, serColorGreen] = useState(false);
-  const [colorBlue, serColorBlue] = useState(false);
-  const [colorYellow, serColorYellow] = useState(false);
-
+const Menu = ({
+  column,
+  setColumn,
+  red,
+  setRed,
+  green,
+  setGreen,
+  blue,
+  setBlue,
+  yellow,
+  setYellow,
+  setMenuOpen,
+  dark,
+  setDark,
+}) => {
   const hendlerClickRed = () => {
-    serColorRed((prev) => !prev);
     setRed((prev) => !prev);
   };
   const hendlerClickGreen = () => {
-    serColorGreen((prev) => !prev);
     setGreen((prev) => !prev);
   };
   const hendlerClickBlue = () => {
-    serColorBlue((prev) => !prev);
     setBlue((prev) => !prev);
   };
   const hendlerClickYellow = () => {
-    serColorYellow((prev) => !prev);
     setYellow((prev) => !prev);
   };
 
-  const refka = useRef();
-  console.log(colorRed);
+  const hendlerEditColumn = (num) => {
+    setColumn(num);
+  };
+
+  const handlerExitMenu = () => {
+    setMenuOpen(false);
+  };
+
+  const handlerClickRadio = () => {
+    console.log(event.target);
+    setDark(event.target.value);
+  };
 
   return (
     <div className={s.box}>
       <div className={s.menu}>
         <div className={s.btnExit}>
-          <button onClick={() => console.log(refka)}>X</button>
+          <button onClick={handlerExitMenu}>✖</button>
         </div>
         <div className={s.colors}>
-          <label>
-            <input
-              type={"checkbox"}
-              value={colorRed}
-              onClick={hendlerClickRed}
-            />{" "}
-            Красный
-          </label>
-          <label>
-            <input
-              type={"checkbox"}
-              value={colorGreen}
-              onClick={hendlerClickGreen}
-            />{" "}
-            Зеленый
-          </label>
-          <label>
-            <input
-              type={"checkbox"}
-              value={colorBlue}
-              onClick={hendlerClickBlue}
-            />{" "}
-            Синий
-          </label>
-          <label>
-            <input
-              type={"checkbox"}
-              value={colorYellow}
-              onClick={hendlerClickYellow}
-            />{" "}
-            Желтый
-          </label>
+          <CustomInput
+            text={"Красный"}
+            color="red"
+            initialValue={red}
+            setValue={hendlerClickRed}
+          />
+          <CustomInput
+            text={"Зеленый"}
+            color="green"
+            initialValue={green}
+            setValue={hendlerClickGreen}
+          />
+          <CustomInput
+            text={"Синий"}
+            color="blue"
+            initialValue={blue}
+            setValue={hendlerClickBlue}
+          />
+          <CustomInput
+            text={"Желтый"}
+            color="yellow"
+            initialValue={yellow}
+            setValue={hendlerClickYellow}
+          />
         </div>
         <div className={s.themes}>
-          <label>
-            <input ref={refka} type={"radio"} name="dark" /> Все
-          </label>
-          <label>
-            <input type={"radio"} name="dark" /> Темные
-          </label>
-          <label>
-            <input type={"radio"} name="dark" /> Светлые
-          </label>
+          <RadioInput
+            dark={dark}
+            name="dark"
+            value="all"
+            text="Все"
+            handlerClickRadio={handlerClickRadio}
+          />
+          <RadioInput
+            dark={dark}
+            name="dark"
+            value="dark"
+            text="Темные"
+            handlerClickRadio={handlerClickRadio}
+          />
+          <RadioInput
+            dark={dark}
+            name="dark"
+            value="nodark"
+            text="Светлые"
+            handlerClickRadio={handlerClickRadio}
+          />
         </div>
         <div className={s.rows}>
           <span>Колонок</span>
-          <input type={"number"} min={1} max={10} />
+          <input
+            type={"number"}
+            min={1}
+            max={10}
+            value={column}
+            onChange={(e) => hendlerEditColumn(e.target.value)}
+          />
         </div>
       </div>
     </div>

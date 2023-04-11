@@ -1,0 +1,17 @@
+.colorInput {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  user-select: none;
+}
+
+.bgColor {
+  width: 20px;
+  height: 20px;
+  border: 1px solid gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #bdbdbd;
+}
