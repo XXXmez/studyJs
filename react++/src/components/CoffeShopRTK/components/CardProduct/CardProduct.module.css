@@ -1,0 +1,16 @@
+.item {
+  border: 1px solid black;
+  padding: 10px 15px;
+  border-radius: 15px;
+}
+
+.name,
+.price {
+  margin-bottom: 10px;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}

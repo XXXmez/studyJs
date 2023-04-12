@@ -37,6 +37,7 @@ import DifferentRequests from "./components/DifferentRequests/DifferentRequests"
 import CountriesFlags from "./components/CountriesFlags/CountriesFlags";
 import CustomSelector from "./components/CustomSelector/CustomSelector";
 import CirclesSquares from "./components/CirclesSquares/CirclesSquares";
+import CoffeShopRTK from "./components/CoffeShopRTK/CoffeShopRTK";
 
 function App() {
   return (
@@ -81,7 +82,8 @@ function App() {
         {/* <Comment /> */}
         {/* <DifferentRequests /> */}
 
-        <CirclesSquares />
+        {/* <CirclesSquares /> */}
+        <CoffeShopRTK />
       </div>
     </BrowserRouter>
   );
