@@ -1,13 +1,12 @@
-import React, { useContext } from "react";
-// import { OrdersContext } from "../../CoffeShopRTK";
+import React from "react";
+import { useSelector } from "react-redux";
 
 import s from "./Orders.module.css";
 
 const Orders = () => {
-  // const contextOrders = useContext(OrdersContext);
-  // const dataOrders = contextOrders.dataOrders;
-  const dataOrders = [];
+  const { orders } = useSelector((state) => state);
 
+  if (!orders.length) return;
   return (
     <div className={s.orders}>
       <h2>Orders</h2>
@@ -18,9 +17,9 @@ const Orders = () => {
           <p>Quantity</p>
           <p>Price</p>
         </div>
-        {dataOrders.map((order) => (
-          <div key={order.orderId} className={s.item}>
-            <p className={s.item_id}>№ {order.orderId}</p>
+        {orders.map((order) => (
+          <div key={order.id} className={s.item}>
+            <p className={s.item_id}>№ {order.id}</p>
             <div className={s.item_orders}>
               {order.order.map((el) => (
                 <div key={el.id} className={s.item_order}>

@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { countItemsBasket } from "../../features";
-import { addBasket, deleteBasket } from "../../store/basketSlice";
+import {
+  addBasket,
+  deleteBasket,
+  deleteItemsBasket,
+} from "../../store/basketSlice";
+import { addOrder } from "../../store/ordersSlice";
 
 import Btn from "../UI/Btn";
 
@@ -40,7 +45,9 @@ const Basket = () => {
   const handlerClickMake = () => {
     const order = basket.filter((el) => selectedProducts.includes(el.id));
     const orderProductsId = selectedProducts;
-    // contextFeatures.addOrder(order, orderProductsId);
+
+    dispatch(addOrder(order));
+    dispatch(deleteItemsBasket(orderProductsId));
 
     setSelectedProducts([]);
   };

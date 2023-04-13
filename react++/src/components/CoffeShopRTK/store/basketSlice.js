@@ -15,7 +15,6 @@ export const basketSlice = createSlice({
     },
     deleteBasket: (state, action) => {
       if (action.payload.count === 1) {
-        console.log("равен");
         // state = state.filter((el) => el.id !== action.payload.id);
         state.splice(
           state.findIndex((el) => el.id === action.payload.id),
@@ -28,9 +27,13 @@ export const basketSlice = createSlice({
         );
       }
     },
+    deleteItemsBasket: (state, action) => {
+      return state.filter((el) => !action.payload.includes(el.id));
+    },
   },
 });
 
-export const { addBasket, deleteBasket } = basketSlice.actions;
+export const { addBasket, deleteBasket, deleteItemsBasket } =
+  basketSlice.actions;
 
 export default basketSlice.reducer;

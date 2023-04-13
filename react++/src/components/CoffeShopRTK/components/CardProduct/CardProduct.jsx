@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { useDispatch } from "react-redux";
-import { addBasket } from "../../store/basketSlice";
+import { addBasket, deleteBasket } from "../../store/basketSlice";
 
 import Btn from "../UI/Btn";
 
@@ -11,10 +11,9 @@ const CardProduct = ({ item, availabilityCart }) => {
 
   const handlerClickAdd = () => {
     dispatch(addBasket(item));
-    console.log(item);
   };
   const handlerClickMinus = (id, count) => {
-    console.log(item);
+    dispatch(deleteBasket({ id, count }));
   };
 
   return (

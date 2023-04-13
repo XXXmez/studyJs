@@ -83,7 +83,7 @@ function App() {
         {/* <DifferentRequests /> */}
 
         {/* <CirclesSquares /> */}
-        <CoffeShopRTK />
+        {/* <CoffeShopRTK /> */}
       </div>
     </BrowserRouter>
   );
