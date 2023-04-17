@@ -15,11 +15,11 @@ export const basketSlice = createSlice({
     },
     deleteBasket: (state, action) => {
       if (action.payload.count === 1) {
-        // state = state.filter((el) => el.id !== action.payload.id);
-        state.splice(
-          state.findIndex((el) => el.id === action.payload.id),
-          1
-        );
+        return [...state].filter((el) => el.id !== action.payload.id);
+        // state.splice(
+        //   state.findIndex((el) => el.id === action.payload.id),
+        //   1
+        // );
       }
       if (action.payload.count > 1) {
         state = state.map((el) =>

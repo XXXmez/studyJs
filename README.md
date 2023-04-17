@@ -1,2 +1,0 @@
-# studyJs
-front study

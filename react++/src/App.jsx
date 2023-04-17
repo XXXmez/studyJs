@@ -82,7 +82,7 @@ function App() {
         {/* <Comment /> */}
         {/* <DifferentRequests /> */}
 
-        {/* <CirclesSquares /> */}
+        <CirclesSquares />
         {/* <CoffeShopRTK /> */}
       </div>
     </BrowserRouter>
