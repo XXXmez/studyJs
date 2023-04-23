@@ -38,6 +38,7 @@ import CountriesFlags from "./components/CountriesFlags/CountriesFlags";
 import CustomSelector from "./components/CustomSelector/CustomSelector";
 import CirclesSquares from "./components/CirclesSquares/CirclesSquares";
 import CoffeShopRTK from "./components/CoffeShopRTK/CoffeShopRTK";
+import TagsRedux from "./components/TagsRedux/TagsRedux";
 
 function App() {
   return (
@@ -82,8 +83,10 @@ function App() {
         {/* <Comment /> */}
         {/* <DifferentRequests /> */}
 
-        <CirclesSquares />
+        {/* <CirclesSquares /> */}
         {/* <CoffeShopRTK /> */}
+
+        <TagsRedux />
       </div>
     </BrowserRouter>
   );
