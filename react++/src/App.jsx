@@ -3,12 +3,11 @@ import { BrowserRouter } from "react-router-dom";
 
 import "./App.css";
 
+/* eslint-disable no-unused-vars */
 import FirstRedux from "./components/FirstRedux/FirstRedux";
 import TodoRedux from "./components/TodoRedux/TodoRedux";
 import TodoReduxApi from "./components/TodoReduxApi/TodoReduxApi";
 import TodoReduxApiRTKQeury from "./components/TodoReduxApiRTKQeury/TodoReduxApiRTKQeury";
-
-/* eslint-disable no-unused-vars */
 import Area from "./components/Area/Area";
 import ColorInputs from "./components/ColorInputs/ColorInputs";
 import FirstLetterV1 from "./components/FirstLetterV1/FirstLetter";
@@ -39,6 +38,7 @@ import CustomSelector from "./components/CustomSelector/CustomSelector";
 import CirclesSquares from "./components/CirclesSquares/CirclesSquares";
 import CoffeShopRTK from "./components/CoffeShopRTK/CoffeShopRTK";
 import TagsRedux from "./components/TagsRedux/TagsRedux";
+import CountriesFlagsRedux from "./components/CountriesFlagsRedux/CountriesFlagsRedux";
 
 function App() {
   return (
@@ -86,7 +86,8 @@ function App() {
         {/* <CirclesSquares /> */}
         {/* <CoffeShopRTK /> */}
 
-        <TagsRedux />
+        {/* <TagsRedux /> */}
+        <CountriesFlagsRedux />
       </div>
     </BrowserRouter>
   );

@@ -1,0 +1,37 @@
+.item {
+  display: flex;
+  justify-content: center;
+  background-color: var(--headerColor);
+  overflow: hidden;
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.itemWrapper {
+  width: 100%;
+}
+
+.text {
+  padding: 15px 15px 25px;
+}
+.name {
+  margin-bottom: 15px;
+}
+
+@media (max-width: 1050px) {
+  .img {
+    height: 175px;
+  }
+}
+@media (max-width: 900px) {
+  .img {
+    height: 200px;
+  }
+}
+@media (max-width: 650px) {
+  .img {
+    height: 225px;
+  }
+}

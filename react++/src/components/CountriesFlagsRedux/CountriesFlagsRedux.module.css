@@ -1,0 +1,17 @@
+.box {
+  width: 100%;
+  color: var(--textColor);
+}
+
+.content {
+  background-color: var(--bodyColor);
+  box-shadow: inset 0px 4px 11px 0px #00000026;
+  padding: 30px;
+  min-height: 100vh;
+}
+
+.wrapper {
+  max-width: var(--maxWidth);
+  margin: 0 auto;
+}
+

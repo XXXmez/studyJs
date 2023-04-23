@@ -1,0 +1,16 @@
+body {
+  --maxWidth: 1200px;
+}
+
+body[data-theme="light"] {
+  --textColor: #5c5c5c;
+  --bodyColor: #e8ebf0;
+  --headerColor: #ffffff;
+  --shadowElement: 0px 0px 10px 2px #00000026;
+}
+body[data-theme="dark"] {
+  --textColor: #d5d5d5;
+  --bodyColor: #1f1b3f;
+  --headerColor: #3a3469;
+  --shadowElement: 0px 0px 6px 1px #bdbdbd61;
+}
