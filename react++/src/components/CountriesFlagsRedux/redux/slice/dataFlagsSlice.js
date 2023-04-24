@@ -15,7 +15,7 @@ export const fetchFlagsByRegion = createAsyncThunk(
   }
 );
 
-export const todoSlice = createSlice({
+export const dataFlagsSlice = createSlice({
   name: "flags",
   initialState: {
     data: [],
@@ -25,7 +25,7 @@ export const todoSlice = createSlice({
     filterData: [],
   },
   reducers: {
-    setFilter: (state, action) => {
+    setFilterData: (state, action) => {
       state.filterData = [...state.data];
       if (action.payload.region) {
         state.filterData = state.filterData.filter(
@@ -60,6 +60,6 @@ export const todoSlice = createSlice({
   },
 });
 
-export const { setFilter } = todoSlice.actions;
+export const { setFilterData } = dataFlagsSlice.actions;
 
-export default todoSlice.reducer;
+export default dataFlagsSlice.reducer;

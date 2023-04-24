@@ -1,13 +1,17 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import { useHref, useNavigate } from "react-router-dom";
+import { addLink } from "../../../redux/slice/historySlice";
 import s from "./Item.module.css";
 
-const Item = ({ item, setHistory }) => {
+const Item = ({ item }) => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const href = useHref();
 
   const handlerClickItem = () => {
-    setHistory((prev) => [...prev, href]);
+    // setHistory((prev) => [...prev, href]);
+    dispatch(addLink(href));
     navigate(`/country/${item.name.common}`);
   };
 

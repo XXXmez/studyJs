@@ -1,8 +1,9 @@
 import React from "react";
 import { useEffect } from "react";
-import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setFilter } from "../../redux/slice/dataFlagsSlice";
+import useDebounce from "../../../../hooks/useDebounce";
+import { setFilterData } from "../../redux/slice/dataFlagsSlice";
+import { setRegion, setSearch } from "../../redux/slice/filterSlice";
 import CustomSelector from "../CustomSelector/CustomSelector";
 
 import s from "./Filters.module.css";
@@ -10,23 +11,35 @@ import s from "./Filters.module.css";
 const Filters = () => {
   const dispatch = useDispatch();
   const flags = useSelector((state) => state.flags.data);
+  const region = useSelector((state) => state.filters.region);
+  const search = useSelector((state) => state.filters.search);
+
+  const handlerSetRegion = (item) => {
+    dispatch(setRegion(item));
+  };
+  const handlerSetSearch = (event) => {
+    const eventValue = event.target.value;
+    dispatch(setSearch(eventValue));
+  };
 
   const regions = flags.reduce((acc, cur) => {
     acc.includes(cur.region) ? "" : acc.push(cur.region);
     return acc;
   }, []);
 
-  const [selectRegion, setSelectRegion] = useState("");
-  const [inputSearch, setInputSearch] = useState("");
+  useEffect(() => {
+    dispatch(setFilterData({ region: region, name: search }));
+  }, [region]);
 
-  const handlerClickInput = (event) => {
-    const eventValue = event.target.value;
-    setInputSearch(eventValue);
+  const quewery = () => {
+    dispatch(setFilterData({ region: region, name: search }));
   };
 
+  const debounce = useDebounce(quewery, 1000);
+
   useEffect(() => {
-    dispatch(setFilter({ region: selectRegion, name: inputSearch }));
-  }, [selectRegion, inputSearch]);
+    debounce();
+  }, [search]);
 
   return (
     <div className={s.box}>
@@ -35,15 +48,15 @@ const Filters = () => {
           <input
             placeholder="search..."
             className={s.input}
-            value={inputSearch}
-            onChange={(e) => handlerClickInput(e)}
+            value={search}
+            onChange={handlerSetSearch}
           />
         </div>
 
         <CustomSelector
           options={regions}
-          state={selectRegion}
-          setState={setSelectRegion}
+          state={region}
+          setState={handlerSetRegion}
           placeholder={"Filter by region"}
         />
       </div>

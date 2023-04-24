@@ -4,13 +4,13 @@ import Item from "./Item/Item";
 
 import s from "./Items.module.css";
 
-const Items = ({ setHistory }) => {
+const Items = () => {
   const flags = useSelector((state) => state.flags.filterData);
 
   return (
     <div className={s.items}>
       {flags.map((item) => (
-        <Item key={item.cca2} item={item} setHistory={setHistory} />
+        <Item key={item.cca2} item={item} />
       ))}
       {flags.length === 0 && <h2>404</h2>}
     </div>

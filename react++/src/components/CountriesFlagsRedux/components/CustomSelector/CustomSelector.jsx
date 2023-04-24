@@ -11,10 +11,9 @@ const CustomSelector = ({
   options = ["первый", "второй"],
   state = "",
   setState = () => {},
-  placeholder = "",
+  placeholder = "Selector",
 }) => {
   const [openSelector, setOpenSelector] = useState(false);
-  // const [state, setState] = useState("");
 
   const handlerClickSelector = () => {
     setOpenSelector((prev) => !prev);

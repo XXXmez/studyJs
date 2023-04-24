@@ -2,17 +2,23 @@ import React from "react";
 
 import s from "./BorderCountryBtn.module.css";
 import { useHref, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { addLink } from "../../../redux/slice/historySlice";
 
-const BorderCountryBtn = ({ data, item, setHistory }) => {
+const BorderCountryBtn = ({ item }) => {
+  const dispatch = useDispatch();
+  const flags = useSelector((state) => state.flags.data);
+
   const navigate = useNavigate();
   const href = useHref();
 
   const handler = (c) => {
-    setHistory((prev) => [...prev, href]);
+    // setHistory((prev) => [...prev, href]);
+    dispatch(addLink(href));
     navigate(`/country/${c}`);
   };
 
-  const currItem = data.find((el) => el.cca3 == item);
+  const currItem = flags.find((el) => el.cca3 == item);
 
   return (
     <div
