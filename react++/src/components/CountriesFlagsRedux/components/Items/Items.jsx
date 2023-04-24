@@ -1,16 +1,18 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import Item from "./Item/Item";
 
 import s from "./Items.module.css";
 
-import Item from "./Item/Item";
+const Items = ({ setHistory }) => {
+  const flags = useSelector((state) => state.flags.filterData);
 
-const Items = ({ data = [], history, setHistory }) => {
   return (
     <div className={s.items}>
-      {data.map((item) => (
+      {flags.map((item) => (
         <Item key={item.cca2} item={item} setHistory={setHistory} />
       ))}
-      {data.length === 0 && <h2>404</h2>}
+      {flags.length === 0 && <h2>404</h2>}
     </div>
   );
 };

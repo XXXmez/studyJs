@@ -1,25 +1,32 @@
 import React from "react";
+import { useEffect } from "react";
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { setFilter } from "../../redux/slice/dataFlagsSlice";
 import CustomSelector from "../CustomSelector/CustomSelector";
 
 import s from "./Filters.module.css";
 
-const Filters = ({
-  regions = [],
-  selectRegion,
-  setSelectRegion,
-  inputSearch,
-  setInputSearch,
-}) => {
+const Filters = () => {
+  const dispatch = useDispatch();
+  const flags = useSelector((state) => state.flags.data);
+
+  const regions = flags.reduce((acc, cur) => {
+    acc.includes(cur.region) ? "" : acc.push(cur.region);
+    return acc;
+  }, []);
+
+  const [selectRegion, setSelectRegion] = useState("");
+  const [inputSearch, setInputSearch] = useState("");
+
   const handlerClickInput = (event) => {
     const eventValue = event.target.value;
     setInputSearch(eventValue);
   };
 
-  // const handlerClickClose = (type) => {
-  //   if (type === "select") {
-  //     setSelectRegion("");
-  //   }
-  // };
+  useEffect(() => {
+    dispatch(setFilter({ region: selectRegion, name: inputSearch }));
+  }, [selectRegion, inputSearch]);
 
   return (
     <div className={s.box}>
@@ -32,29 +39,7 @@ const Filters = ({
             onChange={(e) => handlerClickInput(e)}
           />
         </div>
-        {/* <div className={s.selectBox}>
-          <select
-            className={s.select}
-            value={selectRegion}
-            onChange={(e) => setSelectRegion(e.target.value)}
-          >
-            <option value={""}>Sort by region</option>
-            {regions.map((region) => (
-              <option key={region} value={region}>
-                {region}
-              </option>
-            ))}
-          </select>
-          
-          {selectRegion && (
-            <button
-              onClick={() => handlerClickClose("select")}
-              className={s.close}
-            >
-              x
-            </button>
-          )}
-        </div> */}
+
         <CustomSelector
           options={regions}
           state={selectRegion}

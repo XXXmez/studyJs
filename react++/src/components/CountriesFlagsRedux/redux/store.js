@@ -1,5 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
+import dataFlagsSlice, { fetchFlags } from "./slice/dataFlagsSlice";
 
-export default configureStore({
-  reducer: {},
+export const store = configureStore({
+  reducer: {
+    flags: dataFlagsSlice,
+  },
 });
+
+store.dispatch(fetchFlags());

@@ -5,7 +5,7 @@ import { BsArrowLeft } from "react-icons/bs";
 import s from "./CountryPage.module.css";
 import BorderCountryBtn from "./BorderCountryBtn/BorderCountryBtn";
 
-const CountryPage = ({ data = [], filterData = [], history, setHistory }) => {
+const CountryPage = ({ data = [], history, setHistory }) => {
   const params = useParams();
   const navigate = useNavigate();
 
