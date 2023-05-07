@@ -7,7 +7,7 @@ const TagInputField = () => {
   const [inputTag, setInputTag] = useState("");
 
   const handlerClickAddTag = (e) => {
-    if (e.keyCode === 13 || e.key === "Enter") {
+    if ((e.keyCode === 13 || e.key === "Enter") && inputTag.trim() !== "") {
       dispatch(addTag(inputTag));
       setInputTag("");
     }

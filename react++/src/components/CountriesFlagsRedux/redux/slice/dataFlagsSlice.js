@@ -5,15 +5,15 @@ export const fetchFlags = createAsyncThunk("flags/fetchFlags", async () => {
   const res = await axios.get("https://restcountries.com/v3.1/all");
   return res.data;
 });
-export const fetchFlagsByRegion = createAsyncThunk(
-  "flags/fetchFlags",
-  async (region) => {
-    const res = await axios.get(
-      `https://restcountries.com/v3.1/region/${region}`
-    );
-    return res.data;
-  }
-);
+// export const fetchFlagsByRegion = createAsyncThunk(
+//   "flags/fetchFlags",
+//   async (region) => {
+//     const res = await axios.get(
+//       `https://restcountries.com/v3.1/region/${region}`
+//     );
+//     return res.data;
+//   }
+// );
 
 export const dataFlagsSlice = createSlice({
   name: "flags",

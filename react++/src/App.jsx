@@ -39,6 +39,7 @@ import "./App.css";
 // import CoffeShopRTK from "./components/CoffeShopRTK/CoffeShopRTK";
 import TagsRedux from "./components/TagsRedux/TagsRedux";
 import CountriesFlagsRedux from "./components/CountriesFlagsRedux/CountriesFlagsRedux";
+import ToolkitAlerts from "./components/ToolkitAlerts/ToolkitAlerts";
 
 function App() {
   return (
@@ -87,7 +88,9 @@ function App() {
         {/* <CoffeShopRTK /> */}
 
         {/* <TagsRedux /> */}
-        <CountriesFlagsRedux />
+        {/* <CountriesFlagsRedux /> */}
+
+        <ToolkitAlerts />
       </div>
     </BrowserRouter>
   );
