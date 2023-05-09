@@ -37,8 +37,8 @@ import "./App.css";
 // import CustomSelector from "./components/CustomSelector/CustomSelector";
 // import CirclesSquares from "./components/CirclesSquares/CirclesSquares";
 // import CoffeShopRTK from "./components/CoffeShopRTK/CoffeShopRTK";
-import TagsRedux from "./components/TagsRedux/TagsRedux";
-import CountriesFlagsRedux from "./components/CountriesFlagsRedux/CountriesFlagsRedux";
+// import TagsRedux from "./components/TagsRedux/TagsRedux";
+// import CountriesFlagsRedux from "./components/CountriesFlagsRedux/CountriesFlagsRedux";
 import ToolkitAlerts from "./components/ToolkitAlerts/ToolkitAlerts";
 
 function App() {
